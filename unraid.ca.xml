@@ -7,7 +7,7 @@
   <MyIP/>
   <Shell>bash</Shell>
   <Privileged>false</Privileged>
-  <Support>https://hub.docker.com/r/zachrybaker/netconnmon</Support>
+  <Support>https://forums.unraid.net/topic/113667-netconnmon-support/</Support>
   <Project>https://github.com/zachrybaker/netconnmon</Project>
   <Overview>NetConnMon is an app that can monitor your network connections and take note of when they go up or down.  It can email you when things change.&#xD;
 &#xD;
