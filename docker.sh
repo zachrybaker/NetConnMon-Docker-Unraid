@@ -1,0 +1,1 @@
+/usr/local/emhttp/plugins/dynamix.docker.manager/scripts/docker create --name='netconnmon' --net='bridge' -e TZ="America/Chicago" -e HOST_OS="Unraid" -v '/mnt/user/appdata/netconnmon-db':'netconnmon-db':'rw' 'zachrybaker/netconnmon' 

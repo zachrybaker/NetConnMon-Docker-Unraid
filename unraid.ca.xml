@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>NetConnMon</Name>
+  <Repository>zachrybaker/netconnmon:latest</Repository>
+  <Registry>https://hub.docker.com/r/zachrybaker/netconnmon</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>bash</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://hub.docker.com/r/zachrybaker/netconnmon</Support>
+  <Project>https://github.com/zachrybaker/netconnmon</Project>
+  <Overview>NetConnMon is an app that can monitor your network connections and take note of when they go up or down.  It can email you when things change.&#xD;
+&#xD;
+You configure the types (ICMP, TCP or UPD) connection tests that you desire, their timings, etc. from a browser configuration UI.</Overview>
+  <Category>Tools: Network:Management Network:Other Status:Beta</Category>
+  <WebUI>http://[IP]:[PORT:8080]</WebUI>
+  <TemplateURL/>
+  <Icon>https://icons.iconarchive.com/icons/icons8/windows-8/64/Network-Router-icon.png</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1631490989</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Description>NetConnMon is an app that can monitor your network connections and take note of when they go up or down.  It can email you when things change.&#xD;
+&#xD;
+You configure the types (ICMP, TCP or UPD) connection tests that you desire, their timings, etc. from a browser configuration UI.</Description>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>8080</HostPort>
+        <ContainerPort>80</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/netconnmon</HostDir>
+      <ContainerDir>/app/netconnmon-db</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment/>
+  <Labels/>
+  <Config Name="sqlite db file folder" Target="/app/netconnmon-db" Default="/mnt/user/appdata/netconnmon" Mode="rw" Description="The path to the share or appdata folder for saving the sqlite db file that drives your test configurations, email settings, and events.  Small file. Defaults should suffice." Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/netconnmon</Config>
+  <Config Name="WebUIPortMap" Target="80" Default="8080" Mode="tcp" Description="The port to use for the web UI. Make sure to adjust the value both here AND in the WebUI setting above." Type="Port" Display="always" Required="true" Mask="false">8080</Config>
+</Container>
