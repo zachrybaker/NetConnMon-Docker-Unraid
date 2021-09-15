@@ -13,7 +13,7 @@
 &#xD;
 You configure the types (ICMP, TCP or UPD) connection tests that you desire, their timings, etc. from a browser configuration UI.</Overview>
   <Category>Tools: Network:Management Network:Other Status:Beta</Category>
-  <WebUI>http://[IP]:[PORT:8080]</WebUI>
+  <WebUI>http://[IP]:[PORT:80]</WebUI>
   <TemplateURL/>
   <Icon>https://icons.iconarchive.com/icons/icons8/windows-8/64/Network-Router-icon.png</Icon>
   <ExtraParams/>
